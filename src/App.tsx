@@ -2,6 +2,8 @@ import * as React from 'react';
 import './App.css';
 import logo from './logo.svg';
 import NavbardWhite from './Navbar';
+import PrayJumbotron from './Jumbotron';
+
 
 class App extends React.Component {
   public render() {
@@ -9,6 +11,7 @@ class App extends React.Component {
       <React.Fragment>
         <div className="App">
           <NavbardWhite />
+          <PrayJumbotron />
             <header className="App-header">
               <img src={logo} className="App-logo" alt="logo" />
               <h1 className="App-title">Welcome to React</h1>
