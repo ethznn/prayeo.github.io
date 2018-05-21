@@ -1,23 +1,12 @@
 import * as React from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem } from 'reactstrap';
+import { Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink } from 'reactstrap';
 
 interface State {
-  isOpen: boolean
-}  
+  isOpen: any
+}
 
-export default class NavbardWhite extends React.Component<State> {
-  public constructor(props:any) {
+export default class Example extends React.Component<{}, State> {
+  constructor(props:any) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
@@ -30,38 +19,20 @@ export default class NavbardWhite extends React.Component<State> {
       isOpen: !this.state.isOpen
     });
   }
-  
   public render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <Navbar color="light" light={true} expand="md">
+          <NavbarBrand href="/">LEE HYEONHO / PRAY</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+          <Collapse isOpen={this.state.isOpen} navbar={true}>
+            <Nav className="ml-auto" navbar={true}>
               <NavItem>
-                <NavLink href="/components/">Components</NavLink>
+                <NavLink href="/components/">PROFILE</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink target="_blank" href="https://github.com/prayeo">GITHUB</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
