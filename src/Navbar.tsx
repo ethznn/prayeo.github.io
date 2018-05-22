@@ -5,7 +5,7 @@ interface State {
   isOpen: any
 }
 
-export default class Example extends React.Component<{}, State> {
+export default class PrayNavbar extends React.Component<{}, State> {
   constructor(props:any) {
     super(props);
 
